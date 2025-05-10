@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>මගේ ආදරණීය පෙම්වතියට</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* ඔයාට කැමති font එකක් දාන්න */
+            background-color: #fce4ec; /* ලා රෝස පාට පසුබිමක් */
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #e91e63; /* තද රෝස පාටක් */
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .photo-gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #e91e63;
+            transition: transform 0.3s ease;
+        }
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+        }
+        .proposal-button {
+            background-color: #e91e63; /* තද රෝස පාට */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border-radius: 50px; /* වටකුරු බට්න් එකක් */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+        }
+        .proposal-button:hover {
+            background-color: #c2185b; /* ටිකක් තද රෝස පාට */
+            transform: scale(1.1);
+        }
+        .surprise-message {
+            display: none; /* මුලින් හංගලා තියෙන්නෙ */
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff9c4; /* ලා කහ පාටක් */
+            border: 2px dashed #e91e63;
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .surprise-message h2 {
+            color: #d81b60;
+            font-size: 2em;
+        }
+        .surprise-message p {
+            font-size: 1.2em;
+        }
+        .heart {
+            color: #e91e63;
+            font-size: 3em;
+            animation: beat 0.5s infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes beat {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>මගේ ආදරණීය [MAGE SUDUUUUUUUUU] වෙත,</h1>
+        <p style="font-size: 1.2em; margin-bottom: 30px;">මේ පුංචි වෙබ් පිටුව ඔයා වෙනුවෙන්මයි...</p>
+
+        <div class="photo-gallery">
+            <img src="image1.jpg" alt="අපේ ලස්සන මතකයක් 1">
+            <img src="image2.jpg" alt="අපේ ලස්සන මතකයක් 2">
+            <img src="image3.jpg" alt="අපේ ලස්සන මතකයක් 3">
+            </div>
+
+        <button id="proposalBtn" class="proposal-button">ඔබ මාව විවාහ කරගන්නවාද?</button>
+
+        <div id="surpriseMessage" class="surprise-message">
+            <div class="heart">❤️</div>
+            <h2>ඔව්!!! මම ඔයාට ගොඩක් ආදරෙයි!</h2>
+            <p>ඔයා තමයි මගේ ජීවිතේ හැමදේම. ඔයා මගේම වෙන එක තමයි මගේ ලොකුම හීනය!</p>
+            <p>මම ඔයා එනකල් බලන් ඉන්නවා!</p>
+        </div>
+    </div>
+
+    <script>
+        const proposalButton = document.getElementById('proposalBtn');
+        const surpriseDiv = document.getElementById('surpriseMessage');
+
+        proposalButton.addEventListener('click', function() {
+            proposalButton.style.display = 'none'; // බට්න් එක හංගනවා
+            surpriseDiv.style.display = 'block'; // සර්ප්‍රයිස් එක පෙන්නනවා
+        });
+    </script>
+</body>
+</html>
